@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="TaskTracker is a website to store your tasks and chores. TaskTracker does not require users to log in as they store the tasks with cookies. A tool to store information. Come back every once in a while and mark off what you have finished.">
+    <title>TaskTracker - Write down and keep track of tasks for the day</title>
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body class="text-center" style="background-color: #333333; color: white;">
+        {% include '_navbar.html' %}
+        <div class="container">
+            <div class="container">
+
+  <main role="main" class="inner cover">
+    <h1 class="cover-heading" style="margin-top: 1em;">TaskTracker</h1>
+    <p class="lead">TaskTracker allows users to have a clean and reliable to-do list. TaskTracker requires no log in and remembers tasks for as long as ever. TaskTracker uses cookies to store your tasks and makes sure your the one that needs it.</p>
+    <p class="lead">
+      <a href="#" class="bt n btn-lg btn-secondary" style="margin-bottom: 1em;">Learn more</a>
+        <hr style="color: white;">
+    </p>
+      <table class="table table-dark" style="border-radius: 10px;">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Task</th>
+      <th scope="col">Time to be Completed</th>
+        <th scope="col">Check Off</th>
+      <th scope="col">Delete All</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>{{ task1 }}</td>
+      <td>{{ time1 }}</td>
+        <td><a href="/remove_task1" style="color: limegreen;"> Check Off Task </a></td>
+
+      <td><a href="/clear" style="color: red;"> Delete All Tasks</a></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>{{ task2 }}</td>
+      <td>{{ time2 }}</td>
+        <td><a href="/remove_task2" style="color: limegreen;"> Check Off Task </a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>{{ task3 }}</td>
+      <td>{{ time3 }}</td>
+        <td><a href="/remove_task3" style="color: limegreen;"> Check Off Task</a></td>
+      <td></td>
+
+  </tbody>
+</table>
+      <hr>
+<form method="POST" action="/">
+      <div class="form-group">
+    <label for="exampleFormControlTextarea1" style="font-size: 20px; margin-top: 1em;">Input Todo List Parameters</label>
+          <p style="margin-bottom: 3.5em;"> Please input parameters to be added to your 24/7 stored to-do list!</p>
+          <p style="color: red;"> {{ message }} </p>
+                <table class="table table-dark" style="border-radius: 10px; padding: 2em 2em 2em 2em;">
+  <thead>
+    <tr>
+      <th scope="col">Task</th>
+      <th scope="col">Time to be Completed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><textarea class="form-control" id="exampleFormControlTextarea1" name='namequery1' value='I need to ' rows="3"> I need to: </textarea></td>
+      <td><textarea class="form-control" id="exampleFormControlTextarea1" name='namequery2' value='I should complete this by 'rows="3">I should complete this by: </textarea></td>
+    </tr>
+  </tbody>
+</table>
+          <button type="submit" class="btn btn-lg btn-secondary" style="margin-top: 2em; width: 30%; margin-bottom: 7.5em;"> Submit Parameters | Add to List</button>
+
+  </div>
+</form>
+  </main>
+            </div>
+            </div>
+</body>
+</html>
