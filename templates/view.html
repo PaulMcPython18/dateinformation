@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="TaskTracker is a storage facility for your personal goals. Come back every once in a while and see what you have achieved.">
+    <title>TaskTracker - Write down and keep track of tasks for the day</title>
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<style>
+
+
+</style>
+<body class="text-center" style="background-color: #333333; color: white;">
+        {% include '_navbar.html' %}
+        <div class="container">
+            <div class="container">
+  <main role="main" class="inner cover">
+    <h1 class="cover-heading" style="margin-top: 1em;">TaskTracker</h1>
+    <p class="lead">TaskTracker allows users to have a clean and reliable to-do list. TaskTracker requires no log in and remembers tasks for as long as ever. TaskTracker uses cookies to store your tasks and makes sure your the one that needs it.</p>
+    <p class="lead">
+      <a href="#" class="btn btn-lg btn-secondary" style="margin-bottom: 1em;">Learn more</a>
+        <hr style="color: white;">
+      <p class="lead" style="color: red;"> {{ notification }}</p>
+      <p style="color:red;"> {{ message }} </p>
+<!--      {{ time1 }} {{ task1 }}-->
+<!--      <hr>-->
+<!--      {{ time2 }} {{ task2 }}-->
+<!--      <hr>-->
+<!--      {{ time3 }} {{ task3 }}-->
+      <form method="POST" action="/todo-list">
+          <button type="submit" class="btn btn-lg btn-secondary" style="margin-top: 2em; width: 30%;"> View the List </button>
+      </form>
+    </p>
+
+</body>
+</html>

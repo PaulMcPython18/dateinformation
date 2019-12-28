@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="GoalTracker is a storage facility for your personal goals. Come back every once in a while and see what you have achieved.">
+    <title>TaskTracker - Write down and keep track of tasks for the day</title>
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<style>
+
+
+</style>
+<body class="text-center" style="background-color: #333333; color: white;">
+        {% include '_navbar.html' %}
+
+<center>
+<main role="main" class="inner cover" style="width: 40%;">
+    <h1 class="cover-heading" style="margin-top: 1em;">TaskTracker</h1>
+    <hr>
+    <p class="lead">TaskTracker allows users to have a clean and reliable to-do list. TaskTracker requires no log in and remembers tasks for as long as ever. TaskTracker uses cookies to store your tasks and makes sure your the one that needs it. Cookies is a storage method that websites use to store user info without having them logging in to store this information. Use our website to write down your tasks for the day and to complete them. Thank you for discovering us.</p>
+    <hr>
+    &darr; Click Below to view your Current Tasks &darr;
+    </main>
+      <form method="POST" action="/todo-list">
+          <button type="submit" class="btn btn-lg btn-secondary" style="margin-top: 2em; width: 30%;"> View the List </button>
+      </form>
+    </p>
+</center>
+</body>
+</html>
